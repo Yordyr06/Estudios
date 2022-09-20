@@ -1,0 +1,42 @@
+-- RECORRIENDO UN STRING CON FOR --
+
+Recorrer un string con el ciclo For es tomar la cadena de caracteres
+y separarlas una a una. De este modo, quedaría el comando:
+
+    def run():
+        frase = input("Escribe una frase: ")
+        for caracter in frase:
+            print(caracter.upper())
+    
+    if __name__ == "__main__":
+        run()
+
+Donde usaremos la variable frase para recorrer la frase que se escriba
+en el input. Cuando se escriba una frase, se recorrerá cambiando todas
+las letras a mayúsculas.
+
+
+
+-- EJEMPLOS DEL CICLO FOR PARA RECORRER STRINGS EN PYTHON --
+
+    - PRIMER EJEMPLO:
+
+            def run():
+            ## Este ejemplo imprime cada caracter de tu nombre
+            nombre = input("Escribe tu nombre :")
+            for letra in nombre:
+                print(letra)
+
+        if __name__ == "__main__":
+            run()
+
+
+    - SEGUNDO EJEMPLO:
+
+        def run():
+            frase = input("Escribe una frase: ")
+            for caracter in frase:
+                print(caracter.upper())
+
+        if __name__ == "__main__":
+            run()

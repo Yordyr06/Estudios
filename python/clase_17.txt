@@ -1,0 +1,78 @@
+-- MODULARIZANDO NUESTRO CONVERSOR DE MONEDAS --
+
+Para el siguiente ejemplo, crearemos el código para un conversor de monedas.
+
+En la primera parte se define la función que resumirá muchos procesos del programa.
+Usando def, se agrega la función “conversor” con los parámetros que varían dependiendo
+de las respuestas, que son: tipo de pesos y valor del dólar. Es decir, dentro del
+programa se definirá el valor de cada parámetro.
+
+    * def conversor(tipo_pesos, valor_dolar):
+
+En la variable pesos se plantea que el usuario introduzca con input la cantidad de
+pesos que tiene, encontrando el primer parámetro, que es el tipo de pesos, que se
+establece más adelante por fuera de la función, ya que es un protocolo.
+
+    * pesos = input("¿Cuántos pesos " + tipo_pesos + " tienes?: ")
+
+Ese dato ingresado en la variable pesos se convierte de un string a un número con float.
+
+    * pesos = float(pesos)
+
+En este punto, la variable dólares aparece para definir cuánto cuesta, con base en los
+pesos ingresados anteriormente y el valor dólar que se definirá más tarde por fuera de
+la función, ya que es un protocolo.
+
+    * dolares = pesos / valor_dolar
+
+El valor, que probablemente sea decimal, se reduce con el atributo round dependiento
+de la variable dolares a solo 2 decimales.
+
+    * dolares = round(dolares, 2)
+
+Debido a que los dólares son obtenidos como números, se traducen a strings por medio
+del operador str dolares = str(dolares)
+
+Una vez obtenido el valor de los dolares en string, se imprime el resultado entre
+cadenas de texto: print (“Tienes $ " + dolares + " dolares”)
+
+Luego de establecer la función, se crea la variable menu que no se imprime y
+contiene texto de referencia.
+
+    * menu = “”“
+        Tienes dinero 💲
+        Nosotros la convertimos 💰
+        1 - cop
+        2 - eur
+        3 - arg
+        Elige una opción: “””
+
+Ya definida la variable menu, se crea la variable opción que dependerá de lo
+ingresado en input por el usuario en relación con la variable menu.
+Es decir, que se imprime menu y se deja el espacio para obtener un dato
+digitado por el usuario, que luego es traducido en número usando int.
+
+    * opción = int(input(menu))
+
+Dependiendo de lo que este usuario ingrese en el input de la variable opción:
+Usando if, si es igual a 1, entonces se ejecuta la función anterior de conversor.
+Dentro de esta se establece el protocolo de tipo de peso para este caso y en relación
+con menu que es Colombianos. El protocolo de valor del dólar se define con base en el
+tipo de peso
+
+    * if opción == 1:
+        conversor(“colombianos”, 3875)
+
+Empleando elif, si se selecciona otra opción de la variable menu ingresado en el input
+de opción, se ajusta el protocolo en función a lo mostrado en menu.
+
+    * elif opción == 2:
+        conversor(“euros”, 0.8)
+    * elif opción == 3:
+        conversor(“argentinos”, 65)
+
+Si no se ingresa ningún dato relacionado dentro de las 3 opción de menu, se imprime que
+ingrese una opción correcta.
+
+    * else:
+        print(“ingresa una opción correcta”)

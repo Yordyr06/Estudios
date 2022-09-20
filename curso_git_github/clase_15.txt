@@ -1,0 +1,20 @@
+-- COMO FUNCIONAN LAS RAMAS (BRANCHES) EN GIT --
+
+Las ramas son la manera de hacer cambios en nuestro proyecto sin afectar 
+el flujo de trabajo de la rama principal. Esto porque queremos trabajar
+una parte muy específica de la aplicación o simplemente experimentar.
+
+
+
+
+-- COMANDOS BÁSICOS PARA LOS BRANCHES --
+
+    * git branch -nombre de la rama-: Con este comando se genera una nueva rama.
+    * git checkout -nombre de la rama-: Con este comando puedes saltar de una rama a otra.
+    * git checkout -b rama: Genera una rama y nos mueve a ella automáticamente,
+        Es decir, es la combinación de git brach y git checkout al mismo tiempo.
+    * git reset id-commit: Nos lleva a cualquier commit no importa la rama,
+        ya que identificamos el id del tag., eliminando el historial de los
+        commit posteriores al tag seleccionado.
+    * git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar
+        los commit posteriores al tag seleccionado.
