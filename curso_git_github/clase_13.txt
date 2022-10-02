@@ -59,7 +59,7 @@ commit anterior.
 
 
 
--- ¿OR QUÉ ESTO ES IMPORTANTE? --
+-- ¿POR QUÉ ESTO ES IMPORTANTE? --
 
 - Imagina el siguiente caso:
 Hacemos cambios en los archivos de un proyecto para una nueva actualización.
